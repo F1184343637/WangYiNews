@@ -42,6 +42,9 @@
     _flowLayout.itemSize = self.collectionView.bounds.size;
     _flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
 
+    self.collectionView.pagingEnabled = YES;
+    
+    
 }
 
 - (void)viewDidLoad {
