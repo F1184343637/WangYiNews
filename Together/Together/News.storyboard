@@ -57,7 +57,7 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gls-An-x52" customClass="WDLooperCell">
-                                <rect key="frame" x="62" y="0.0" width="252" height="198"/>
+                                <rect key="frame" x="61.5" y="0.0" width="252" height="198"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="252" height="198"/>

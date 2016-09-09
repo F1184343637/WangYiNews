@@ -7,6 +7,7 @@
 //
 
 #import "WDLooperVC.h"
+#import "WDLooperModel.h"
 
 @interface WDLooperVC ()
 
@@ -18,19 +19,40 @@
 
 @implementation WDLooperVC
 
+- (void)setDataArray:(NSArray *)dataArray {
+
+    _dataArray = dataArray;
+    
+    [self.collectionView reloadData];
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-}
-
-- (NSArray *)dataArray {
-
-    if (_dataArray == nil) {
+    [WDLooperModel getModelArrayWithCompleteBlock:^(NSArray *array) {
+       
+        self.dataArray = array;
         
-    }
-    return _dataArray;
+    } andErrorBlock:^{
+        
+        NSLog(@"wangdi -- error");
+    }];
+    
 }
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+
+    return self.dataArray.count;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+
+    
+    
+    return nil;
+}
+
 
 
 
