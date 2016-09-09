@@ -8,6 +8,7 @@
 
 #import "WDLooperVC.h"
 #import "WDLooperModel.h"
+#import "WDLooperCell.h"
 
 @interface WDLooperVC ()
 
@@ -23,7 +24,20 @@
 
     _dataArray = dataArray;
     
+    self.collectionView.backgroundColor = [UIColor whiteColor];
+    
     [self.collectionView reloadData];
+}
+
+- (void)viewDidLayoutSubviews {
+
+    [super viewDidLayoutSubviews];
+    
+    _flowLayout.minimumInteritemSpacing = 0;
+    _flowLayout.minimumLineSpacing = 0;
+    _flowLayout.itemSize = self.collectionView.bounds.size;
+    _flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+    self.collectionView.pagingEnabled = YES;
 }
 
 
@@ -43,14 +57,18 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
 
-    return 0;
+    return self.dataArray.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
 
+    WDLooperCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"wdCell" forIndexPath:indexPath];
     
+    WDLooperModel *model = self.dataArray[indexPath.row];
     
-    return nil;
+    cell.model = model;
+
+    return cell;
 }
 
 
