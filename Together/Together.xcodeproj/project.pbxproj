@@ -12,6 +12,8 @@
 		01F631F31D82EE280026D82F /* WDLooperModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F631F21D82EE280026D82F /* WDLooperModel.m */; };
 		0956446C1D82DC9700A002C1 /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0956446B1D82DC9700A002C1 /* News.storyboard */; };
 		0956446F1D82DCD400A002C1 /* NewsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0956446E1D82DCD400A002C1 /* NewsTableViewController.m */; };
+		095644721D82DE8200A002C1 /* NewsModels.m in Sources */ = {isa = PBXBuildFile; fileRef = 095644711D82DE8200A002C1 /* NewsModels.m */; };
+		095644781D82E43D00A002C1 /* CJHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 095644771D82E43D00A002C1 /* CJHTTPSessionManager.m */; };
 		80654D901D82D4E10008431E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 80654D8F1D82D4E10008431E /* main.m */; };
 		80654D931D82D4E10008431E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 80654D921D82D4E10008431E /* AppDelegate.m */; };
 		80654D961D82D4E10008431E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80654D951D82D4E10008431E /* ViewController.m */; };
@@ -30,6 +32,10 @@
 		0956446B1D82DC9700A002C1 /* News.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = News.storyboard; sourceTree = "<group>"; };
 		0956446D1D82DCD400A002C1 /* NewsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsTableViewController.h; sourceTree = "<group>"; };
 		0956446E1D82DCD400A002C1 /* NewsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsTableViewController.m; sourceTree = "<group>"; };
+		095644701D82DE8200A002C1 /* NewsModels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsModels.h; sourceTree = "<group>"; };
+		095644711D82DE8200A002C1 /* NewsModels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsModels.m; sourceTree = "<group>"; };
+		095644761D82E43D00A002C1 /* CJHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJHTTPSessionManager.h; sourceTree = "<group>"; };
+		095644771D82E43D00A002C1 /* CJHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJHTTPSessionManager.m; sourceTree = "<group>"; };
 		1D5C41C84E8112C244FB3B55 /* Pods-Together.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Together.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Together/Pods-Together.debug.xcconfig"; sourceTree = "<group>"; };
 		2E22B5C45FC8217D033DAAE5 /* libPods-Together.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Together.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		568F363C15A81B31946BCE98 /* Pods-Together.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Together.release.xcconfig"; path = "Pods/Target Support Files/Pods-Together/Pods-Together.release.xcconfig"; sourceTree = "<group>"; };
@@ -56,6 +62,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		095644751D82E40E00A002C1 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				095644761D82E43D00A002C1 /* CJHTTPSessionManager.h */,
+				095644771D82E43D00A002C1 /* CJHTTPSessionManager.m */,
+			);
+			name = Tools;
+			sourceTree = "<group>";
+		};
 		29400125A8E5125C97846AD6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -86,7 +101,11 @@
 		80654D8D1D82D4E10008431E /* Together */ = {
 			isa = PBXGroup;
 			children = (
+
+				095644751D82E40E00A002C1 /* Tools */,
+
 				0956446B1D82DC9700A002C1 /* News.storyboard */,
+
 				80654DA71D82D5090008431E /* ImgLoop */,
 				80654DA61D82D5050008431E /* Home */,
 				80654DA51D82D5000008431E /* News */,
@@ -146,6 +165,8 @@
 		80654DA81D82D5110008431E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				095644701D82DE8200A002C1 /* NewsModels.h */,
+				095644711D82DE8200A002C1 /* NewsModels.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -369,6 +390,8 @@
 				01F631F31D82EE280026D82F /* WDLooperModel.m in Sources */,
 				0956446F1D82DCD400A002C1 /* NewsTableViewController.m in Sources */,
 				80654D961D82D4E10008431E /* ViewController.m in Sources */,
+				095644721D82DE8200A002C1 /* NewsModels.m in Sources */,
+				095644781D82E43D00A002C1 /* CJHTTPSessionManager.m in Sources */,
 				80654D931D82D4E10008431E /* AppDelegate.m in Sources */,
 				80654D901D82D4E10008431E /* main.m in Sources */,
 			);
