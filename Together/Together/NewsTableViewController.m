@@ -7,12 +7,36 @@
 //
 
 #import "NewsTableViewController.h"
+#import "NewsModels.h"
 
 @interface NewsTableViewController ()
+
+//新闻数据源
+@property (nonatomic, strong)NSArray <NewsModels *> *newsArray;
 
 @end
 
 @implementation NewsTableViewController
+
+- (void)setNewsArray:(NSArray<NewsModels *> *)newsArray{
+
+    _newsArray = newsArray;
+    
+    [self.tableView reloadData];
+}
+
+
+- (void)setUrlString:(NSString *)urlString{
+
+    _urlString = urlString;
+    
+    [NewsModels nesListWithURL:urlString success:^(NSArray<NewsModels *> *array) {
+        self.newsArray = array;
+    } error:^{
+        NSLog(@"网络错误")
+    }];
+
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -22,6 +46,14 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    
+    
+    
+    
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -31,14 +63,10 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
-    return 0;
+    return self.newsArray.count;
 }
 
 /*
