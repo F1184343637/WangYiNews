@@ -31,11 +31,7 @@
 
     _urlString = urlString;
     
-    [NewsModels nesListWithURL:@"http://c.m.163.com/nc/article/list/T1348648517839/0-20.html" success:^(NSArray<NewsModels *> *array) {
-        self.newsArray = array;
-    } error:^{
-        NSLog(@"网络错误");
-    }];
+    
 
 }
 
@@ -47,6 +43,12 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    [NewsModels nesListWithURL:@"http://c.m.163.com/nc/article/list/T1348648517839/0-20.html" success:^(NSArray<NewsModels *> *array) {
+        self.newsArray = array;
+    } error:^{
+        NSLog(@"网络错误");
+    }];
     
 
 }
