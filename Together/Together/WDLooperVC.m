@@ -66,7 +66,11 @@
     
     WDLooperModel *model = self.dataArray[indexPath.row];
     
+    cell.tag = indexPath.item;
+    
     cell.model = model;
+    
+    
 
     return cell;
 }
