@@ -15,6 +15,7 @@
 		095644721D82DE8200A002C1 /* NewsModels.m in Sources */ = {isa = PBXBuildFile; fileRef = 095644711D82DE8200A002C1 /* NewsModels.m */; };
 		095644781D82E43D00A002C1 /* CJHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 095644771D82E43D00A002C1 /* CJHTTPSessionManager.m */; };
 		0956447E1D82FA5700A002C1 /* NewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0956447D1D82FA5700A002C1 /* NewsTableViewCell.m */; };
+		095644801D8308BA00A002C1 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0956447F1D8308BA00A002C1 /* Info.plist */; };
 		80654D901D82D4E10008431E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 80654D8F1D82D4E10008431E /* main.m */; };
 		80654D931D82D4E10008431E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 80654D921D82D4E10008431E /* AppDelegate.m */; };
 		80654D961D82D4E10008431E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80654D951D82D4E10008431E /* ViewController.m */; };
@@ -39,6 +40,7 @@
 		095644771D82E43D00A002C1 /* CJHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJHTTPSessionManager.m; sourceTree = "<group>"; };
 		0956447C1D82FA5700A002C1 /* NewsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsTableViewCell.h; sourceTree = "<group>"; };
 		0956447D1D82FA5700A002C1 /* NewsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsTableViewCell.m; sourceTree = "<group>"; };
+		0956447F1D8308BA00A002C1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D5C41C84E8112C244FB3B55 /* Pods-Together.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Together.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Together/Pods-Together.debug.xcconfig"; sourceTree = "<group>"; };
 		2E22B5C45FC8217D033DAAE5 /* libPods-Together.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Together.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		568F363C15A81B31946BCE98 /* Pods-Together.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Together.release.xcconfig"; path = "Pods/Target Support Files/Pods-Together/Pods-Together.release.xcconfig"; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				80654D951D82D4E10008431E /* ViewController.m */,
 				80654D971D82D4E10008431E /* Main.storyboard */,
 				80654D9A1D82D4E10008431E /* Assets.xcassets */,
+				0956447F1D8308BA00A002C1 /* Info.plist */,
 				80654D9F1D82D4E10008431E /* Info.plist */,
 				80654D911D82D4E10008431E /* AppDelegate.h */,
 				80654D921D82D4E10008431E /* AppDelegate.m */,
@@ -326,6 +329,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				095644801D8308BA00A002C1 /* Info.plist in Resources */,
 				80654D9B1D82D4E10008431E /* Assets.xcassets in Resources */,
 				0956446C1D82DC9700A002C1 /* News.storyboard in Resources */,
 				80654D991D82D4E10008431E /* Main.storyboard in Resources */,
