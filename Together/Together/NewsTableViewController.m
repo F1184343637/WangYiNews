@@ -31,7 +31,7 @@
 
     _urlString = urlString;
     
-    [NewsModels nesListWithURL:urlString success:^(NSArray<NewsModels *> *array) {
+    [NewsModels nesListWithURL:@"http://c.m.163.com/nc/article/list/T1348648517839/0-20.html" success:^(NSArray<NewsModels *> *array) {
         self.newsArray = array;
     } error:^{
         NSLog(@"网络错误");
@@ -64,13 +64,21 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    NewsModels *models = self.newsArray[indexPath.item];
+    NewsModels *models = self.newsArray[indexPath.row];
     
-    NewsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"" forIndexPath:indexPath];
+    NewsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[NewsTableViewCell getReuse:models] forIndexPath:indexPath];
     
     cell.models = models;
     
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+
+    NewsModels *models = self.newsArray[indexPath.row];
+    
+    return [NewsTableViewCell getHeight:models];
+    
 }
 
 

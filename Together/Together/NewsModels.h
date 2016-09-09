@@ -28,6 +28,12 @@
 //新闻来源
 @property (nonatomic, copy)NSString *source;
 
+//大图来源
+@property (nonatomic, assign)BOOL imgType;
+
+//三张图片的来源
+@property (nonatomic, copy)NSArray *imgextra;
+
 
 
 + (instancetype)nesWithDict:(NSDictionary *)dict;

@@ -21,6 +21,13 @@
 @property (weak, nonatomic) IBOutlet UILabel *replyCount;
 
 
+@property (strong, nonatomic) IBOutletCollection(UIImageView) NSArray *Imgs;
+
+
+
+
+
+
 
 @property (nonatomic,strong)NewsModels *models;
 
