@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--News Table View Controller-->
@@ -49,20 +50,58 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Zmj-2M-FeK">
-                            <size key="itemSize" width="50" height="50"/>
+                            <size key="itemSize" width="252" height="198"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gls-An-x52">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gls-An-x52" customClass="WDLooperCell">
+                                <rect key="frame" x="62" y="0.0" width="252" height="198"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="252" height="198"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jRH-dX-V7a">
+                                            <rect key="frame" x="0.0" y="0.0" width="252" height="169"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ss" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AnG-Zg-9Gb">
+                                            <rect key="frame" x="0.0" y="169" width="179" height="29"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="29" id="s9G-Mv-kt7"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="DGT-Hp-sca">
+                                            <rect key="frame" x="171" y="161" width="81" height="37"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="81" id="DUS-Rg-2xy"/>
+                                            </constraints>
+                                            <color key="pageIndicatorTintColor" red="0.33801993670000002" green="0.6051757807" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="currentPageIndicatorTintColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </pageControl>
+                                    </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <constraints>
+                                    <constraint firstItem="jRH-dX-V7a" firstAttribute="trailing" secondItem="DGT-Hp-sca" secondAttribute="trailing" id="1qS-EE-dfB"/>
+                                    <constraint firstItem="AnG-Zg-9Gb" firstAttribute="bottom" secondItem="DGT-Hp-sca" secondAttribute="bottom" id="3rR-Eq-3lY"/>
+                                    <constraint firstAttribute="trailing" secondItem="jRH-dX-V7a" secondAttribute="trailing" id="82G-RW-0VI"/>
+                                    <constraint firstItem="jRH-dX-V7a" firstAttribute="top" secondItem="gls-An-x52" secondAttribute="top" id="H1S-mT-89U"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="AnG-Zg-9Gb" secondAttribute="trailing" constant="65" id="O4L-TQ-DlO"/>
+                                    <constraint firstAttribute="bottom" secondItem="AnG-Zg-9Gb" secondAttribute="bottom" id="cc8-pp-3Hg"/>
+                                    <constraint firstItem="jRH-dX-V7a" firstAttribute="leading" secondItem="gls-An-x52" secondAttribute="leading" id="dfE-rq-iO0"/>
+                                    <constraint firstItem="AnG-Zg-9Gb" firstAttribute="top" secondItem="jRH-dX-V7a" secondAttribute="bottom" id="lfk-Sc-sQx"/>
+                                    <constraint firstItem="jRH-dX-V7a" firstAttribute="leading" secondItem="AnG-Zg-9Gb" secondAttribute="leading" id="qwu-YL-pbp"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="iv_imageView" destination="jRH-dX-V7a" id="K9w-Us-B5K"/>
+                                    <outlet property="lb_label" destination="AnG-Zg-9Gb" id="xYV-UT-3RJ"/>
+                                    <outlet property="pc_pageControll" destination="DGT-Hp-sca" id="UlW-jv-ATk"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -71,6 +110,9 @@
                         </connections>
                     </collectionView>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="flowLayout" destination="Zmj-2M-FeK" id="Zrq-s1-9hp"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kO3-xV-rg9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -10,6 +10,10 @@
 
 @interface WDLooperVC ()
 
+@property (weak, nonatomic) IBOutlet UICollectionViewFlowLayout *flowLayout;
+
+@property (nonatomic ,strong) NSArray *dataArray;
+
 @end
 
 @implementation WDLooperVC
@@ -19,6 +23,15 @@
     [super viewDidLoad];
     
 }
+
+- (NSArray *)dataArray {
+
+    if (_dataArray == nil) {
+        
+    }
+    return _dataArray;
+}
+
 
 
 
