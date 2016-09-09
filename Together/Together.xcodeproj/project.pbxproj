@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01F631EA1D82E69F0026D82F /* WDLooperCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F631E91D82E69F0026D82F /* WDLooperCell.m */; };
+		01F631ED1D82E7DE0026D82F /* WDLooperVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F631EC1D82E7DE0026D82F /* WDLooperVC.m */; };
 		0956446C1D82DC9700A002C1 /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0956446B1D82DC9700A002C1 /* News.storyboard */; };
 		0956446F1D82DCD400A002C1 /* NewsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0956446E1D82DCD400A002C1 /* NewsTableViewController.m */; };
 		80654D901D82D4E10008431E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 80654D8F1D82D4E10008431E /* main.m */; };
@@ -18,6 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01F631E81D82E69F0026D82F /* WDLooperCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WDLooperCell.h; path = "../../../../Documents/多线程代码/9-5 网易新闻/9-5 网易新闻/WDLooperCell.h"; sourceTree = "<group>"; };
+		01F631E91D82E69F0026D82F /* WDLooperCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WDLooperCell.m; path = "../../../../Documents/多线程代码/9-5 网易新闻/9-5 网易新闻/WDLooperCell.m"; sourceTree = "<group>"; };
+		01F631EB1D82E7DE0026D82F /* WDLooperVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDLooperVC.h; sourceTree = "<group>"; };
+		01F631EC1D82E7DE0026D82F /* WDLooperVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDLooperVC.m; sourceTree = "<group>"; };
 		0956446B1D82DC9700A002C1 /* News.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = News.storyboard; sourceTree = "<group>"; };
 		0956446D1D82DCD400A002C1 /* NewsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsTableViewController.h; sourceTree = "<group>"; };
 		0956446E1D82DCD400A002C1 /* NewsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsTableViewController.m; sourceTree = "<group>"; };
@@ -202,6 +208,8 @@
 		80654DB11D82D5560008431E /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				01F631E81D82E69F0026D82F /* WDLooperCell.h */,
+				01F631E91D82E69F0026D82F /* WDLooperCell.m */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -209,6 +217,8 @@
 		80654DB21D82D55A0008431E /* Vc */ = {
 			isa = PBXGroup;
 			children = (
+				01F631EB1D82E7DE0026D82F /* WDLooperVC.h */,
+				01F631EC1D82E7DE0026D82F /* WDLooperVC.m */,
 			);
 			name = Vc;
 			sourceTree = "<group>";
@@ -349,6 +359,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01F631ED1D82E7DE0026D82F /* WDLooperVC.m in Sources */,
+				01F631EA1D82E69F0026D82F /* WDLooperCell.m in Sources */,
 				0956446F1D82DCD400A002C1 /* NewsTableViewController.m in Sources */,
 				80654D961D82D4E10008431E /* ViewController.m in Sources */,
 				80654D931D82D4E10008431E /* AppDelegate.m in Sources */,
