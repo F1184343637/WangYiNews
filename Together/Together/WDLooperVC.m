@@ -8,6 +8,7 @@
 
 #import "WDLooperVC.h"
 #import "WDLooperModel.h"
+#import "WDLooperCell.h"
 
 @interface WDLooperVC ()
 
@@ -26,12 +27,28 @@
     [self.collectionView reloadData];
 }
 
+- (void)viewDidLayoutSubviews {
+
+    [super viewDidLayoutSubviews];
+
+    [self setUpFlowLayout];
+    
+}
+
+- (void)setUpFlowLayout {
+    
+    _flowLayout.minimumLineSpacing = 0;
+    _flowLayout.minimumInteritemSpacing = 0;
+    _flowLayout.itemSize = self.collectionView.bounds.size;
+    _flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     [WDLooperModel getModelArrayWithCompleteBlock:^(NSArray *array) {
-       
+        
         self.dataArray = array;
         
     } andErrorBlock:^{
@@ -48,9 +65,13 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
 
+    WDLooperCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"wdCell" forIndexPath:indexPath];
     
+    WDLooperModel *model = self.dataArray[indexPath.row];
     
-    return nil;
+    cell.model = model;
+    
+    return cell;
 }
 
 
