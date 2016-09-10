@@ -38,20 +38,36 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(change:) name:@"a" object:nil];
+    
+    
+//    [NewsModels nesListWithURL:urlString success:^(NSArray<NewsModels *> *array) {
+//        self.newsArray = array;
+//    } error:^{
+//        NSLog(@"网络错误");
+//    }];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    [NewsModels nesListWithURL:@"http://c.m.163.com/nc/article/list/T1348648517839/0-20.html" success:^(NSArray<NewsModels *> *array) {
-        self.newsArray = array;
-    } error:^{
-        NSLog(@"网络错误");
-    }];
     
 
 }
+
+- (void)change:(NSNotification *)noti
+{
+    _urlString = noti.object;
+    
+    [NewsModels nesListWithURL:_urlString success:^(NSArray<NewsModels *> *array) {
+        self.newsArray = array;
+        
+    } error:^{
+        NSLog(@"网络错误");
+    }];
+}
+
 
 #pragma mark
 #pragma mark -数据源

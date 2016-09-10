@@ -21,6 +21,12 @@
 		80654D961D82D4E10008431E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80654D951D82D4E10008431E /* ViewController.m */; };
 		80654D991D82D4E10008431E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80654D971D82D4E10008431E /* Main.storyboard */; };
 		80654D9B1D82D4E10008431E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80654D9A1D82D4E10008431E /* Assets.xcassets */; };
+		8085DEDB1D83AFB200C6C61F /* HMChannelModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8085DEDA1D83AFB200C6C61F /* HMChannelModel.m */; };
+		8085DEDE1D83B03A00C6C61F /* HMLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8085DEDD1D83B03A00C6C61F /* HMLabel.m */; };
+		8085DEE11D83B0ED00C6C61F /* HMHomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8085DEE01D83B0ED00C6C61F /* HMHomeCell.m */; };
+		8085DEE41D83B1DC00C6C61F /* HMHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8085DEE31D83B1DC00C6C61F /* HMHomeViewController.m */; };
+		8085DEE61D83B2D300C6C61F /* HomeSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8085DEE51D83B2D300C6C61F /* HomeSB.storyboard */; };
+		8085DEE81D83B82C00C6C61F /* topic_news.json in Resources */ = {isa = PBXBuildFile; fileRef = 8085DEE71D83B82C00C6C61F /* topic_news.json */; };
 		A271919B951D7B9855B56938 /* libPods-Together.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E22B5C45FC8217D033DAAE5 /* libPods-Together.a */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +59,16 @@
 		80654D981D82D4E10008431E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		80654D9A1D82D4E10008431E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		80654D9F1D82D4E10008431E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8085DED91D83AFB200C6C61F /* HMChannelModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMChannelModel.h; sourceTree = "<group>"; };
+		8085DEDA1D83AFB200C6C61F /* HMChannelModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMChannelModel.m; sourceTree = "<group>"; };
+		8085DEDC1D83B03A00C6C61F /* HMLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMLabel.h; sourceTree = "<group>"; };
+		8085DEDD1D83B03A00C6C61F /* HMLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMLabel.m; sourceTree = "<group>"; };
+		8085DEDF1D83B0ED00C6C61F /* HMHomeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMHomeCell.h; sourceTree = "<group>"; };
+		8085DEE01D83B0ED00C6C61F /* HMHomeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMHomeCell.m; sourceTree = "<group>"; };
+		8085DEE21D83B1DC00C6C61F /* HMHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMHomeViewController.h; sourceTree = "<group>"; };
+		8085DEE31D83B1DC00C6C61F /* HMHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMHomeViewController.m; sourceTree = "<group>"; };
+		8085DEE51D83B2D300C6C61F /* HomeSB.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HomeSB.storyboard; sourceTree = "<group>"; };
+		8085DEE71D83B82C00C6C61F /* topic_news.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = topic_news.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +122,7 @@
 		80654D8D1D82D4E10008431E /* Together */ = {
 			isa = PBXGroup;
 			children = (
+				8085DEE71D83B82C00C6C61F /* topic_news.json */,
 				095644751D82E40E00A002C1 /* Tools */,
 				0956446B1D82DC9700A002C1 /* News.storyboard */,
 				80654DA71D82D5090008431E /* ImgLoop */,
@@ -150,6 +167,7 @@
 				80654DAE1D82D5490008431E /* Cell */,
 				80654DAD1D82D5460008431E /* Vc */,
 				80654DAC1D82D5410008431E /* Label */,
+				8085DEE51D83B2D300C6C61F /* HomeSB.storyboard */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -202,6 +220,8 @@
 		80654DAC1D82D5410008431E /* Label */ = {
 			isa = PBXGroup;
 			children = (
+				8085DEDC1D83B03A00C6C61F /* HMLabel.h */,
+				8085DEDD1D83B03A00C6C61F /* HMLabel.m */,
 			);
 			name = Label;
 			sourceTree = "<group>";
@@ -209,6 +229,8 @@
 		80654DAD1D82D5460008431E /* Vc */ = {
 			isa = PBXGroup;
 			children = (
+				8085DEE21D83B1DC00C6C61F /* HMHomeViewController.h */,
+				8085DEE31D83B1DC00C6C61F /* HMHomeViewController.m */,
 			);
 			name = Vc;
 			sourceTree = "<group>";
@@ -216,6 +238,8 @@
 		80654DAE1D82D5490008431E /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				8085DEDF1D83B0ED00C6C61F /* HMHomeCell.h */,
+				8085DEE01D83B0ED00C6C61F /* HMHomeCell.m */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -223,6 +247,8 @@
 		80654DAF1D82D54D0008431E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8085DED91D83AFB200C6C61F /* HMChannelModel.h */,
+				8085DEDA1D83AFB200C6C61F /* HMChannelModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -329,10 +355,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8085DEE81D83B82C00C6C61F /* topic_news.json in Resources */,
 				095644801D8308BA00A002C1 /* Info.plist in Resources */,
 				80654D9B1D82D4E10008431E /* Assets.xcassets in Resources */,
 				0956446C1D82DC9700A002C1 /* News.storyboard in Resources */,
 				80654D991D82D4E10008431E /* Main.storyboard in Resources */,
+				8085DEE61D83B2D300C6C61F /* HomeSB.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,12 +421,16 @@
 			files = (
 				01F631ED1D82E7DE0026D82F /* WDLooperVC.m in Sources */,
 				01F631F31D82EE280026D82F /* WDLooperModel.m in Sources */,
+				8085DEDB1D83AFB200C6C61F /* HMChannelModel.m in Sources */,
 				0956446F1D82DCD400A002C1 /* NewsTableViewController.m in Sources */,
+				8085DEE41D83B1DC00C6C61F /* HMHomeViewController.m in Sources */,
 				01F631FC1D82F2930026D82F /* WDLooperCell.m in Sources */,
 				80654D961D82D4E10008431E /* ViewController.m in Sources */,
 				095644721D82DE8200A002C1 /* NewsModels.m in Sources */,
 				0956447E1D82FA5700A002C1 /* NewsTableViewCell.m in Sources */,
 				095644781D82E43D00A002C1 /* CJHTTPSessionManager.m in Sources */,
+				8085DEE11D83B0ED00C6C61F /* HMHomeCell.m in Sources */,
+				8085DEDE1D83B03A00C6C61F /* HMLabel.m in Sources */,
 				80654D931D82D4E10008431E /* AppDelegate.m in Sources */,
 				80654D901D82D4E10008431E /* main.m in Sources */,
 			);
