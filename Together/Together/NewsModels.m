@@ -27,6 +27,9 @@
 
 + (void)nesListWithURL:(NSString *)currentURLString success:(void(^)(NSArray <NewsModels *>*))successBlock error:(void(^)())errorBlock{
     
+    
+    
+    
     [[CJHTTPSessionManager sharedSessionManager]GET:currentURLString parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary *  _Nullable responseObject) {
